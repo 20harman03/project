@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Jewellery You Desire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="logo">
+    <img src="logoo.png" width="100px" height="50px">
+  </div>
+  <ul>
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="contact.html">CONTACT US</a></li>
+    <li><a href="button.html">SIGN IN</a></li>
+    <li><a href="about.html">ABOUT US </a></li>
+  </ul>
+
+  <img src="sdxxw559.png" alt="ring" width="100%">
+
+  <div id="block_container">
+    <div id="bloc1">
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="ring2.webp" style="width:100%" height="90%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="ring3.webp" style="width:100%" height="90%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="ring4.webp" style="width:100%" height="90%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 4</div>
+          <img src="ring5.webp" style="width:100%" height="90%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+
+    <div id="bloc2">
+      <h1>GLAMIRA RING VENICE</h1>
+      <div class="img">
+        <img src="37elot6r.png" style="width:20%" height="20%">
+      </div>
+      <h1>CA $1,318.00</h1>
+      <p>This price is up to 55% lower in comparison to traditional jewellery shops.</p>
+      <h4>The stone we have used in this precious ring is pure DIAMOND. This dream ring is in the shade 585 ROSE AND
+        WHITE and metal used is GOLD.
+        For purity this ring is engraved with our logo and name (GLAMIRA). Moreover, this jewellery is RHODIUM PLATED
+        with the AVERAGE WEIGTH OF 3.82 Grams.</h4>
+      <div class="text2">
+        <h3>GREAT DEAL!!</h3>
+        <h3>HURRY UP AND ORDER ONE FOR YOUR LOVED ONES...</h3>
+      </div>
+      <div class="button">
+        <form>
+          <input type="button" onclick="window.location.href='button.html';" value="ORDER NOW!!" />
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="bottom">
+    <h3>Free delivery & return</h3>
+    <p>Estimated delivery </p>
+    <p>time: Aug. 16 – 17</p>
+    <p>60 Day Return </p>
+    <p></p>Policy</p>
+
+  </div>
+</body>
+<footer>
+
+</footer>
+
+</html>
